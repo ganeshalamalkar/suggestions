@@ -1,14 +1,9 @@
-package com.shipco.phoenix.air.modules.booking.client.airimport.view;
 import java.util.Arrays;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.TreeSet;
 
-public class NewMain
+public class Suggestions
 {
    static ArrayList<String> list = new ArrayList<String>();
    static TreeSet<String> treeSet = new TreeSet<String>();
