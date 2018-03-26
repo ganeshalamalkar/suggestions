@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.TreeSet;
 
-public class Suggestions
+public class SuggestionsBuilder
 {
    static ArrayList<String> list = new ArrayList<String>();
    static TreeSet<String> treeSet = new TreeSet<String>();
@@ -12,7 +12,15 @@ public class Suggestions
       String[] stopWords = {"is", "a", "can", "the",":",".","?","i"};
       String[] tokenStream = {"The", "beautiful", "girl", "from", "the", "farmers", "market", ".", "I", "like",
                               "chewing", "gum", "." };
-      List<String> stopWordsList = Arrays.asList(stopWords);
+      processInputTokens(stopWords, tokenStream);
+   }
+
+/**
+ * @param stopWords
+ * @param tokenStream
+ */
+public static void processInputTokens(String[] stopWords, String[] tokenStream) {
+	List<String> stopWordsList = Arrays.asList(stopWords);
       int i=0;
       ArrayList<String> tempSuggestions = new ArrayList<String>();
       ArrayList<ArrayList<String>> suggestions = new ArrayList<ArrayList<String>>();
